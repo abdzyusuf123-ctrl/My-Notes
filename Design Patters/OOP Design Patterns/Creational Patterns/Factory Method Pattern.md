@@ -18,7 +18,7 @@ And instead of calling `new` everywhere for every one of those classes, you call
 ---
 
 ---
-## Chain of how its called
+## Chain
 Usage → Trait (Parser) → Companion Object (apply) → Classes (Objects are created from) (CsvParser/TsvParser/etc.)
 
 
