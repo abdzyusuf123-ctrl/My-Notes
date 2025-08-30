@@ -17,18 +17,23 @@ And instead of calling `new` everywhere for every one of those classes, you call
 
 ---
 
+---
+## Chain of how its called
+Usage → Trait (Parser) → Companion Object (apply) → Classes (Objects are created from) (CsvParser/TsvParser/etc.)
+
+
 ## How it looks in Scala
 ```scala
-sealed trait Parser { def parse(s: String): List[String] }
+sealed trait Parser { def parse(s: String): List[String] } // Common Trait
 
-final class CsvParser extends Parser {
-  def parse(s: String) = s.split(",").toList
+final class CsvParser extends Parser { 
+  def parse(s: String) = s.split(",").toList // First class to extend trait
 }
 final class TsvParser extends Parser {
-  def parse(s: String) = s.split("\t").toList
+  def parse(s: String) = s.split("\t").toList // Second class to extend trait
 }
 
-object Parser {
+object Parser { // Companion Object responsible for pattern matching different classes and creating objects from them
   def apply(kind: String): Parser = kind match {
     case "csv" => new CsvParser
     case "tsv" => new TsvParser
@@ -37,5 +42,10 @@ object Parser {
 }
 
 // Usage
-val p: Parser = Parser("csv")   // factory decides which concrete class
+val p: Parser = Parser("csv")   // factory decides which kind of class to create object from
 p.parse("a,b,c")
+
+
+
+
+
