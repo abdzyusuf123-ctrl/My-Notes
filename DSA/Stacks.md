@@ -21,13 +21,6 @@
 ### 1. **Monotonic Stack**
 - A stack that maintains elements in either **increasing** or **decreasing** order.
 - Typically used when you need to find **next/previous greater/smaller** elements.
-
-**Examples:**
-- Next Greater Element (NGE)
-- Daily Temperatures
-- Largest Rectangle in Histogram
-- Trapping Rain Water
-
 👉 **When to use:**  
 - The problem asks about **nearest element to the left/right** that is greater/smaller.  
 - You need to **maintain order** while efficiently discarding irrelevant elements.  
@@ -39,12 +32,6 @@
 - A stack used to **track state/history** or **match pairs**.
 - Often involves **pushing when you see an opening condition** and **popping when you see a closing condition**.
 
-**Examples:**
-- Balanced Parentheses / Valid Brackets
-- Backtracking problems (undo/redo, DFS recursion stack)
-- Undo functionality in editors
-- Postfix expression evaluation
-
 👉 **When to use:**  
 - The problem involves **nested or paired structures** (brackets, tags, recursive calls).  
 - You need to **reverse order** or keep track of **previous states**.  
@@ -52,14 +39,14 @@
 
 ---
 
-## 🔹 How to Recognize Stack Problems
+## 🔹 Order of processing in a Stack
 
-Ask yourself:
-1. Does the problem involve **undoing/reversing operations**? (→ Classic stack)  
-2. Does it involve **matching open/close pairs**? (→ Classic stack)  
-3. Does it require **finding nearest greater/smaller element** to the left/right? (→ Monotonic stack)  
-4. Do we need to keep track of **candidates in order**, discarding weaker ones as we go? (→ Monotonic stack)  
-5. Is recursion or backtracking naturally present? (→ Implicitly uses a stack under the hood)
+### When processing (pushing) each element in a stack:
+1. **Left to Right** (Normal) processing:
+    When you are focusing on the elements that come after the current one you are at
+
+2. **Right to Left** (Reverse) processing:
+  When you are focusing on the elements that come before the current one you are at
 
 ---
 
