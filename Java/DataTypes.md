@@ -85,8 +85,29 @@ System.out.println(x.toString()); // ERROR: int has no methods
 
 Integer y = 42;
 System.out.println(y.toStr
+```
 
+## Type Casting
+As part of Java's mutability, type casting allows you to tell the JVM to treat one type as if it was another type.
 
-Primitive Type Casting
-As part of Java's mutability, type casting allows you to 
+### Primitve Type Casting
+Allows you to dynamically switch the type for a primitive:
+
+```java
+int x = 42;
+double y = x; //Gives you 42.0
+```
+In other words you basically change the shape/size of the raw value
+
+### Reference Type Casting
+Allows you to dynamically change the kind of utility methods you can use on your reference type variable.
+For instance:
+```java
+Object example = "Hello";
+System.out.println(example.length) //❌ ERROR - We cant use .length() method on this as the Object does not contain it
+
+String s = (String) example;
+System.out.println(example.length) //✅ - As we can use .length() method which belongs to String class
+```
+
 
