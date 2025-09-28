@@ -84,7 +84,7 @@ int x = 42;
 System.out.println(x.toString()); // ERROR: int has no methods
 
 Integer y = 42;
-System.out.println(y.toStr
+System.out.println(y.toString)
 ```
 
 ## Type Casting
@@ -95,7 +95,8 @@ Allows you to dynamically switch the type for a primitive:
 
 ```java
 int x = 42;
-double y = x; //Gives you 42.0
+double y = (double) x; //Gives you 42.0
+double y = Double.valueOf(x); //Also works
 ```
 In other words you basically change the shape/size of the raw value
 
