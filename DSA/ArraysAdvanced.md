@@ -62,7 +62,7 @@ Sum = 20 - 2 = 18
 - `prefixSum[r]` contains everything up to `r`.  
 - `prefixSum[l-1]` contains everything before `l`.  
 - Subtracting clears out the extra part.  
-
+**NOTE: ONLY USE FOR SUB-ARRAY PREFIX PROBLEMS**
 ---
 
 ### Building a Prefix Sum Array
