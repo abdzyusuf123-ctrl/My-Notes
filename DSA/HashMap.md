@@ -102,12 +102,46 @@ print(hashmap)
 This is much more efficient than repeatedly calling `list.count()` for every element.
 
 ---
+### 2. Lookup Map
 
-### ✅ Rule of Thumb
+A **Lookup Map** uses a HashMap to connect **one type of information to another**.  
+
+- **Key:** The element you are iterating over.  
+- **Value:** The condition, index, or piece of data you want to return or reference later.  
+
+---
+
+### Why Is It Useful?
+
+It allows your code to **remember information from earlier steps** and **reuse it instantly** — without rescanning the input every time.  
+This pattern is extremely common in problems involving lookups, complements, or pair matching.
+
+---
+
+### Example (Two-Sum Problem)
+```python
+nums = [2, 7, 11, 15]
+target = 9
+hashmap = {}
+
+for i, n in enumerate(nums):
+    complement = target - n
+    if complement in hashmap:             # 👈 Lookup check
+        print([hashmap[complement], i])   # Output: [0, 1]
+        break
+    hashmap[n] = i                         # 👈 Store number → index
+```
+
+---
+
+### ✅ Rule of Thumb — Lookup Map Pattern
+
 If a problem involves:
-- **Frequencies**
-- **Duplicates**
-- **Comparing elements or lists**
+- **Finding a match, pair, or complement**
+- **Tracking where something was last seen**
+- **Mapping one thing to another** (e.g., letter → word, index → value)
+- **Checking relationships or constraints between elements**
 
-👉 **Think HashMap (Frequency Map)** first.  
-It’s one of the most versatile patterns in problem solving.
+👉 **Think HashMap (Lookup Map)**  
+
+It’s your **go-to pattern** whenever you need to remember past information to make a constant-time decision later — instead of looping again.  
