@@ -1,6 +1,10 @@
 # Basics of Coding Interviews
 
-This file contains all the useful tricks and fundamentals for solving coding interviews.
+This file contains all the useful tricks and fundamentals for solving coding interviews. 
+
+Remember:
+- Loops act as the engine of our core logic that is used to solve the problem and is repeated at every iteration until we get our desired output
+- Tracking States act as our memory for every iteration and allow us to pass data from one iteration to another
 
 ---
 
@@ -90,3 +94,7 @@ for n in nums:
     max_val = max(max_val, n)
 ```
 Used to track the smallest or largest number encountered during iteration.
+
+---
+
+
