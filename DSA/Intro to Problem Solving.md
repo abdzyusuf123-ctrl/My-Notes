@@ -1,7 +1,11 @@
 # Introduction to Problem Solving
 
 ---
+## 🚀 Most Important Information
 
+- Most Coding Interview questions will have a core logic (in a form of a for or while loop) that will do some computation over and over again until the desired output of a test case is met
+- The path to finding what that core logic is based on finding which DSA pattern to use
+  
 Before starting **any technical interview problem**, follow these key steps to ensure a clear, structured approach.
 
 ---
@@ -60,15 +64,6 @@ Now translate your plan into simple, readable pseudocode.
 2. Simulate test cases **step by step** to verify that it produces the expected result.  
 
 💡 *If your pseudocode works logically, implementation becomes mechanical.*
-
----
-
-## 🚀 Most Important Takeaways
-
-- Don’t rush to match the problem to a known pattern — **understand it first.**  
-- Treat each problem **creatively**, like solving a real task at work.  
-- **DSA patterns are tools**, not the goal. Use them to optimize after you understand the problem.  
-- Always start with **brute force**, then improve efficiency with patterns and data structures.
 
 ---
 
