@@ -1,46 +1,92 @@
-Basics of Coding Intervies
-This file contains all the useful tricks/fundamentals of solving coding interviews
+# Basics of Coding Interviews
 
-Loops
-Both While and For Loops act as the gateway of solving a problem, we provide our core logic withn and they are repeated until the desired output is met
+This file contains all the useful tricks and fundamentals for solving coding interviews.
 
-For Loops
-We typically use a for loop for when we are going over an array
+---
 
-Here are a the 3 main variations:
-nums = [1,2,3,4,5]
-1) for n in nums: - This is when we need to read the data in the array for some computation and NOT than changing the array
-2) for i in range(len(nums)): - This is when we want to change the data in the array and NOT just read the data
-3) for i, n in enumerate(nums): - This is when you want to change the data in the array BUT you can automatically get the data as well
-4) for x, y in zip(array1, array2) - This is when we want to read the data of 2 arrays at the same time
+## 🔁 Loops
 
+Both **while** and **for** loops act as the gateway to solving a problem.  
+They execute your core logic repeatedly until the desired output is achieved.
 
-While Loops
-We typically use a While Loop for when a condition is true
+---
 
-While <condition>: 
+## 🧮 For Loops
 
-Tracking State:
-We typically create variables that are responsible for tracking any change within each iteration of our for/while loops
+We typically use a `for` loop when we are iterating over an array.
 
-Counting Variables:
+**Main Variations:**
+
+```python
+nums = [1, 2, 3, 4, 5]
+
+# 1) Read-only access
+for n in nums:
+    # Use this when reading data from the array without modifying it
+    print(n)
+
+# 2) Index-based access
+for i in range(len(nums)):
+    # Use this when modifying data in the array
+    nums[i] *= 2
+
+# 3) Index and element access
+for i, n in enumerate(nums):
+    # Use this when you need both index and value
+    print(i, n)
+
+# 4) Parallel iteration over two arrays
+for x, y in zip(array1, array2):
+    # Use this when reading from two arrays simultaneously
+    print(x, y)
+```
+
+---
+
+## 🔄 While Loops
+
+We typically use a `while` loop when we need to **repeat actions while a condition is true**.
+
+```python
+while <condition>:
+    # Execute code while condition is True
+    ...
+```
+
+---
+
+## 🧭 Tracking State
+
+We often create **state variables** to track changes within each iteration of a loop.
+
+### Counting Variable
+```python
 count = 0
 for n in nums:
     if n > 10:
         count += 1
-Used to count how many times a condition is true
+```
+Used to count how many times a condition is true.
 
-Running Sum Variable:
+---
+
+### Running Sum Variable
+```python
 running_sum = 0
 for n in nums:
-  running_sum += nums
-Used to keep track of the total sum at of each element at every iteration
+    running_sum += n
+```
+Used to keep track of the total sum of elements during each iteration.
 
-Min/Max Tracking Variable
-min-val = float('inf')
-max_val = float('inf')
+---
+
+### Min/Max Tracking Variable
+```python
+min_val = float('inf')
+max_val = float('-inf')
+
 for n in nums:
-  min_val = min(min_val, n)
-  max_val = max(max_val, n)
-This allows you to keep track of the smallest or larget number encountered at every iteration
-
+    min_val = min(min_val, n)
+    max_val = max(max_val, n)
+```
+Used to track the smallest or largest number encountered during iteration.
