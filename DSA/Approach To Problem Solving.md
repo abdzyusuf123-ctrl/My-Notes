@@ -3,8 +3,14 @@
 ---
 ## 🚀 Most Important Information
 
+**Core Logic** 
 - Most Coding Interview questions will have a core logic (in a form of a for or while loop) that will do some computation over and over again until the desired output of a test case is met
-- The path to finding what that core logic is based on finding which DSA pattern to use
+- The path to finding what that core logic is based on finding which **algorithm** to use
+
+**Memory** 
+- Most Coding Interview questions will also require you to keep track of some data (for instance tracking the maximum sum) which is then updated and reused by the core logic to help us get the desired output
+- The path to finding which kind of memery to use is based on finding which **Data Structure** to use
+
   
 Before starting **any technical interview problem**, follow these key steps to ensure a clear, structured approach.
 
