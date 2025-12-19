@@ -100,3 +100,38 @@ We use it to remember the current range of elements between the two pointers.
 
 **Core Logic:**  
 For each element encountered, we move the right pointer forward and only move the left pointer when a condition is met.
+
+---
+
+## Sliding Window
+
+### Fixed-Size Sliding Window
+**Memory:**  
+We use it to remember the conditional-based summary of what is currently in the window
+
+**Core Logic:**  
+For each element encountered, we move the right pointer forward and we only move the left pointer if the window size exceeds a certain length
+
+---
+
+### Variable Size Sliding Window
+**Memory:**  
+We use it to remember the conditional-based summary of what is currently in the window
+
+**Core Logic:**  
+For each element encountered, we move the right pointer forward and we only move the left pointer if the window contains an element that doesn't meet a condition
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
