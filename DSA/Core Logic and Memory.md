@@ -1,4 +1,4 @@
-# Core Logic and Memory for Every DS/A
+# Core Logic & Memory & Global Conditon for Every DS/A
 
 Below, this file outlines how the following **Data Structures / Algorithms** (and their main patterns) use the two principles that are integral to all coding interview problems.
 
@@ -17,6 +17,11 @@ The path to finding what that core logic is comes from identifying which **algor
 Most coding interview questions will also require you to keep track of some data (for instance, tracking the maximum sum), which is then updated and reused by the core logic to help produce the desired output.
 
 The path to finding which kind of **memory** to use comes from identifying which **data structure** to use.
+
+---
+
+## Global Condition
+Most coding interview questions will also maintain a condition that must be true at each iteration and if that condition is false after an iteration then the algorithm breaks
 
 ---
 
@@ -47,6 +52,9 @@ We use it to remember the occurrence of all relevant elements in a list (the ele
 **Core Logic:**  
 For each element encountered, we use the memory to increase its frequency, and if we haven’t encountered it before, we assign it a value of `1`.
 
+**Global Conditon**  
+After each iteration, in our map we should have the correct amount of frequency for each element we encountered
+
 ---
 
 ### Lookup Map
@@ -56,6 +64,9 @@ We use it to remember relationships between problem-specific patterns and elemen
 
 **Core Logic:**  
 For each element encountered, we use the map to look up its specific pattern and decide if that element meets the required condition.
+
+**Global Conditon**  
+After each iteration, in our map we should have the correct pattern matching the each element we encountered
 
 ---
 
@@ -67,7 +78,10 @@ For each element encountered, we use the map to look up its specific pattern and
 We use it to remember (push) all relevant elements (relevant based on the problem) and forget (skip/pop) everything else.
 
 **Core Logic:**  
-For each element encountered, we use the memory to decide—under specific conditions (depending on the problem)—when to push or pop the stack.
+For each element encountered, we use the memory to decide—under specific conditions (depending on the problem) — when to push or pop the stack.
+
+**Global Conditon**  
+After each iteration, in our stack we should contain all the relevant elements (in increasing/decreasing order) and upon popping an element we should never process it again
 
 ---
 
@@ -78,6 +92,9 @@ We use it to remember (push) unprocessed data and remove (pop) it when we find i
 
 **Core Logic:**  
 For each element encountered, we decide whether to remove (pop) unprocessed data because its match was found (the current data), or add (push) the current data because its matching pair has not yet been found.
+
+**Global Conditon**  
+After each iteration, in our stack we should contain all the relevant elements and pop only when we find its matching pair
 
 ---
 
@@ -91,6 +108,10 @@ We use it to remember the current indexes of the two elements we are comparing.
 **Core Logic:**  
 While the pointers have not met, we compare both elements using the pointers and decide to move one or both pointers based on a specific condition.
 
+**Global Conditon**  
+After each iteration, both pointers should only be moved under specific conditions until they meet
+
+
 ---
 
 ### Same Direction Two Pointers
@@ -100,6 +121,9 @@ We use it to remember the current range of elements between the two pointers.
 
 **Core Logic:**  
 For each element encountered, we move the right pointer forward and only move the left pointer when a condition is met.
+
+**Global Conditon**  
+After each iteration, the left pointer should only be moved under specific conditions until the right pointer has reached the end of the array/string
 
 ---
 
@@ -112,6 +136,9 @@ We use it to remember the conditional-based summary of what is currently in the 
 **Core Logic:**  
 For each element encountered, we move the right pointer forward and we only move the left pointer if the number of elements in the window exceeds a certain length
 
+**Global Conditon**  
+After each iteration, the window should shrink only if the number of elements has exceeded the specific size and grow if it less than the specific size
+
 ---
 
 ### Variable Size Sliding Window
@@ -121,6 +148,8 @@ We use it to remember the conditional-based summary of what is currently in the 
 **Core Logic:**  
 For each element encountered, we move the right pointer forward and we only move the left pointer if the number of elements in the window violate a condition
 
+**Global Conditon**  
+After each iteration, the window should shrink only if the number of elements has broken a specific conditional number and grow if it less than a specific conditional number
 
 
 
