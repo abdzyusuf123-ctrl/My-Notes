@@ -1,6 +1,6 @@
 # Core Logic & Memory & Global Conditon for Every DS/A
 
-Below, this file outlines how the following **Data Structures / Algorithms** (and their main patterns) use the two principles that are integral to all coding interview problems.
+Below, this file outlines how the following **Data Structures / Algorithms** (and their main patterns) use the **3 core** principles that are integral to all coding interview problems.
 
 ---
 
@@ -21,7 +21,7 @@ The path to finding which kind of **memory** to use comes from identifying which
 ---
 
 ## Global Condition
-Most coding interview questions will also maintain a condition that must be true at each iteration and if that condition is false after an iteration then the algorithm breaks
+Most coding interview questions will also maintain a condition that must be true at each iteration and if that condition is false after an iteration then the something is wrong with your code
 
 ---
 
