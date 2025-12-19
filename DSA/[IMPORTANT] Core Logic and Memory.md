@@ -50,7 +50,7 @@ Most coding interview questions will also maintain a condition that must be true
 We use it to remember the occurrence of all relevant elements in a list (the element is the key and the frequency is the value).
 
 **Core Logic:**  
-For each element encountered, we use the memory to increase its frequency, and if we haven’t encountered it before, we assign it a value of `1`.
+For each element encountered, we use the memory to increase its frequency, and if we haven’t encountered it before, we assign it a value of `1`. - **For Loop**
 
 **Global Conditon**  
 After each iteration, in our map we should have the correct amount of frequency for each element we encountered
@@ -63,7 +63,7 @@ After each iteration, in our map we should have the correct amount of frequency 
 We use it to remember relationships between problem-specific patterns and elements.
 
 **Core Logic:**  
-For each element encountered, we use the map to look up its specific pattern and decide if that element meets the required condition.
+For each element encountered, we use the map to look up its specific pattern and decide if that element meets the required condition. - **For Loop**
 
 **Global Conditon**  
 After each iteration, in our map we should have the correct pattern matching the each element we encountered
@@ -78,7 +78,7 @@ After each iteration, in our map we should have the correct pattern matching the
 We use it to remember (push) all relevant elements (relevant based on the problem) and forget (skip/pop) everything else.
 
 **Core Logic:**  
-For each element encountered, we use the memory to decide—under specific conditions (depending on the problem) — when to push or pop the stack.
+For each element encountered, we use the memory to decide—under specific conditions (depending on the problem) — when to push or pop the stack. - **For Loop + Inner While Loop**
 
 **Global Conditon**  
 After each iteration, in our stack we should contain all the relevant elements (in increasing/decreasing order) and upon popping an element we should never process it again
@@ -91,7 +91,7 @@ After each iteration, in our stack we should contain all the relevant elements (
 We use it to remember (push) unprocessed data and remove (pop) it when we find its matching pair (based on the problem’s condition).
 
 **Core Logic:**  
-For each element encountered, we decide whether to remove (pop) unprocessed data because its match was found (the current data), or add (push) the current data because its matching pair has not yet been found.
+For each element encountered, we decide whether to remove (pop) unprocessed data because its match was found (the current data), or add (push) the current data because its matching pair has not yet been found. - **For Loop**
 
 **Global Conditon**  
 After each iteration, in our stack we should contain all the relevant elements and pop only when we find its matching pair
@@ -106,7 +106,7 @@ After each iteration, in our stack we should contain all the relevant elements a
 We use it to remember the current indexes of the two elements we are comparing.
 
 **Core Logic:**  
-While the pointers have not met, we compare both elements using the pointers and decide to move one or both pointers based on a specific condition.
+While the pointers have not met, we compare both elements using the pointers and decide to move one or both pointers based on a specific condition. **While Loop**
 
 **Global Conditon**  
 After each iteration, both pointers should only be moved under specific conditions until they meet
@@ -120,7 +120,7 @@ After each iteration, both pointers should only be moved under specific conditio
 We use it to remember the current range of elements between the two pointers.
 
 **Core Logic:**  
-For each element encountered, we move the right pointer forward and only move the left pointer when a condition is met.
+For each element encountered, we move the right pointer forward and only move the left pointer when a condition is met. **For Loop + Inner While Loop OR Just While Loop**
 
 **Global Conditon**  
 After each iteration, the left pointer should only be moved under specific conditions until the right pointer has reached the end of the array/string
@@ -134,7 +134,7 @@ After each iteration, the left pointer should only be moved under specific condi
 We use it to remember the conditional-based summary of what is currently in the window
 
 **Core Logic:**  
-For each element encountered, we move the right pointer forward and we only move the left pointer if the number of elements in the window exceeds a certain length
+For each element encountered, we move the right pointer forward and we only move the left pointer if the number of elements in the window exceeds a certain length. **For Loop**
 
 **Global Conditon**  
 After each iteration, the window should shrink only if the number of elements has exceeded the specific size and grow if it less than the specific size
@@ -146,7 +146,7 @@ After each iteration, the window should shrink only if the number of elements ha
 We use it to remember the conditional-based summary of what is currently in the window
 
 **Core Logic:**  
-For each element encountered, we move the right pointer forward and we only move the left pointer if the number of elements in the window violate a condition
+For each element encountered, we move the right pointer forward and we only move the left pointer if the number of elements in the window violate a condition. **For + Inner While Loop**
 
 **Global Conditon**  
 After each iteration, the window should shrink only if the number of elements has broken a specific conditional number and grow if it less than a specific conditional number
