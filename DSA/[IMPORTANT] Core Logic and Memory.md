@@ -177,10 +177,19 @@ For each node in our tree, we take the size of the level (number of nodes) and w
 **Global Conditon**  
 After each iteration, the queue should only contain the nodes of the next tree level.
 
+---
 
+## Heaps
 
+### Min/Max Heaps
+**Memory:**  
+We use it to remember all the elements and their order of smallest to largest and vice-versa
 
+**Core Logic:**  
+For each element we encounter, we push it to the heap, if the heap length is greater/less than the conditional value in the problem, we pop the element in the heap **For + Inner While Loop**
 
+**Global Conditon**  
+After each iteration, the heap should correctly store the relationships of elements in smallest to largest and vice-versa.
 
 
 
