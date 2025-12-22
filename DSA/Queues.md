@@ -21,9 +21,9 @@ All operations run in **O(1)** time.
 
 ---
 
-## Expiration Queues
+## Conditional Queues
 
-An **expiration queue** is a queue that only adds or removes elements under a specific condition.  
+An **conditional queue** is a queue that only adds or removes elements under a specific condition.  
 All elements in the queue must satisfy a **window constraint** (time, index, etc.).
 
 ### How It Works
