@@ -151,10 +151,31 @@ For each element encountered, we move the right pointer forward and we only move
 **Global Conditon**  
 After each iteration, the window should shrink only if the number of elements has broken a specific conditional number and grow if it less than a specific conditional number
 
+---
 
+## Queues
 
+### Conditional Queues
+**Memory:**  
+We use it to remember all the relevant elements or summary of elements that fit the specific condition of a problem
 
+**Core Logic:**  
+For each element encountered, we add it to our queue. While the global condition of queue is false, we remove the oldest element from queue. **For + Inner While Loop**
 
+**Global Conditon**  
+After each iteration, the queue should only contain all the element/summary of elements that fit the specifc condition of a problem
+
+---
+
+### BFS Queues
+**Memory:**  
+We use it to remember all the nodes of a specific level in our tree
+
+**Core Logic:**  
+For each node in our tree, we take the size of the level (number of nodes) and we then remove all nodes in that level, we then add its child nodes into the queue **For + Inner While Loop**
+
+**Global Conditon**  
+After each iteration, the queue should only contain the child nodes of a parent node.
 
 
 
