@@ -175,7 +175,7 @@ We use it to remember all the nodes of a specific level in our tree
 For each node in our tree, we take the size of the level (number of nodes) and we then remove all nodes in that level, we then add its child nodes into the queue **For + Inner While Loop**
 
 **Global Conditon**  
-After each iteration, the queue should only contain the child nodes of a parent node.
+After each iteration, the queue should only contain the nodes of the next tree level.
 
 
 
