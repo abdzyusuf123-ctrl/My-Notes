@@ -23,6 +23,11 @@ The path to finding which kind of **memory** to use comes from identifying which
 ## Global Condition
 Most coding interview questions will also maintain a condition that must be true at each iteration and if that condition is false after an iteration then the something is wrong with your code
 
+It is important for every problem to:
+- Know the **Global Condition**
+- Identify what breaks the **Global Condition**
+- Understand what is required to fix the **Global Condition**
+
 ---
 
 ## Common Memory Tools
